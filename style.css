@@ -1,0 +1,182 @@
+@keyframes move-background-x {
+    0% {
+        background-position-x: 0%;
+    }
+
+    50% {
+        background-position-x: 100%;
+    }
+
+    100% {
+        background-position-x: 0%;
+    }
+}
+
+@keyframes move-background-y {
+    0% {
+        background-position-y: 50%;
+    }
+
+    25% {
+        background-position-y: 30%;
+    }
+
+    75% {
+        background-position-y: 70%;
+    }
+
+    100% {
+        background-position-y: 50%;
+    }
+}
+
+body {
+    position: relative;
+    background-color: black;
+    text-align: center;
+    background-image: url("assets/stars.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 50%, 100% 50%;
+    animation: move-background-x 30s linear infinite, move-background-y 10s ease-in-out infinite;
+}
+
+.planets {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 560px 560px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    animation: move-background-x 30s linear infinite, move-background-y 10s ease-in-out infinite;
+}
+
+#click {
+    position: relative;
+    margin-top: 800px;
+    background-color: transparent;
+    border-color: red;
+    border-radius: 50%;
+    border-width: 15px;
+}
+
+#score {
+    color: white;
+    vertical-align: text-top;
+    position: fixed;
+    left: 0;
+    margin-left: 15px;
+    font-size: x-large;
+    font-family: cursive;
+}
+
+#mejora {
+    color: white;
+    vertical-align: text-top;
+    position: fixed;
+    left: 0;
+    margin-top: 35px;
+    margin-left: 15px;
+    font-size: x-large;
+    font-family: cursive;
+}
+
+#costo {
+    color: white;
+    vertical-align: text-top;
+    position: fixed;
+    left: 0;
+    margin-top: 130px;
+    margin-left: 15px;
+    font-size: large;
+    font-family: cursive;
+}
+
+#moreClick {
+    color: #000;
+    background-color: red;
+    border-color: red;
+    border-radius: 30%;
+    border-width: 5px;
+    font-family: cursive;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5px;
+    margin-top: 90px;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.click-boton:active {
+    transform: translateY(2px);
+}
+
+.click-boton {
+    background-image: url("assets/botones.png");
+    background-size: 1040px 1040px;
+    background-repeat: no-repeat;
+    background-position: -25px 0;
+    width: 98px;
+    /* establece el ancho y alto adecuados para la imagen */
+    height: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+#mute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 30%;
+    background-color: red;
+    border-color: red;
+    font-family: cursive;
+}
+
+#destruir {
+    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 46.6%;
+    border-radius: 30%;
+    background-color: red;
+    border-color: red;
+    font-family: cursive;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#explosion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -5;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
+}
+
+.explosion-anim {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes explosion {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

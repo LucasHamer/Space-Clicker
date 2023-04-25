@@ -1,0 +1,3 @@
+Aumento de precio al pasar de nivel ✔
+Llegado al nivel final un mensaje de fin ✔
+Icono para la pagina ✔

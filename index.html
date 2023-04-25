@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/Planets/planet00.png">
+    <title>Space Clicker</title>
+</head>
+
+<body>
+    <div class="planets"></div>
+
+    <audio id="ambiente" loop autoplay src="assets/ambiente.mp3"></audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ambiente = document.getElementById('ambiente');
+            ambiente.volume = 0.02;
+        });
+    </script>
+    <audio id="audio-click" src="assets/click.mp3"></audio>
+
+    <button id="click" type="button" onclick="sumaClicks()" class="click-boton"></button>
+    <label id="score">Score: 0</label>
+
+    <label id="mejora">Upgrades: </label>
+    <button id="moreClick" type="button" disabled onclick="upgrade()">2x Multiply</button>
+    <label id="costo">Costo 20</label>
+
+    <button id="mute" type="button" onclick="mute()">MUTE</button>
+
+    <button disabled id="destruir" type="button" onclick="destruir()">DESTRUIR</button>
+    <div id="explosion">
+        <img src="assets/explosion.gif">
+    </div>
+
+    <audio id="audioExplosion" src="assets/explosion-sound.mp3"></audio>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
